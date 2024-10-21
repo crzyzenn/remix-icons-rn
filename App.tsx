@@ -1,10 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import RemixIcon from './components';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
+      <Text>Preview</Text>
+      <RemixIcon name="ri-4k-fill" size={100} />
+      <RemixIcon name="ri-bookmark-fill" size={100} />
+      <RemixIcon name="ri-home-fill" size={100} />
       <StatusBar style="auto" />
     </View>
   );
