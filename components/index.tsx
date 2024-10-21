@@ -14,10 +14,11 @@ const RemixIcon = ({
 }) => {
   // If name starts with a number add a prefix "svg"
   const resolvedName = /^\d/.test(+name[0] as any) ? `svg-${name}` : name;
-
   const iconComponentName = resolvedName
     .split("-")
-    .map((s) => s[0].toUpperCase() + s.substr(1))
+    .map((s) => {
+      return !isNaN(+s[0]) ? s.toUpperCase() : s[0].toUpperCase() + s.substr(1);
+    })
     .join("");
 
   // @ts-expect-error
