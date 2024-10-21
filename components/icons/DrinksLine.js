@@ -1,17 +1,13 @@
-import * as React from "react"
-import Svg, { Path } from "react-native-svg"
-
-function DrinksLine(props) {
-  return (
-    <Svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      fill="currentColor"
-      {...props}
-    >
-      <Path d="M4 2h3.323l1.2 3H3v2h2.118l.827 14.059a1 1 0 00.998.941h10.114a1 1 0 00.998-.941L18.882 7H21V5H10.677l-2-5H4v2zm3.3 8.025L7.12 7h9.758l-.292 4.967c-2.307-.114-3.164-.475-4.216-.896-1.092-.436-2.4-.936-5.072-1.046zm.117 2.008c2.304.114 3.172.48 4.223.9 1.06.424 2.316.905 4.83 1.031L16.113 20H7.886l-.469-7.967z" />
-    </Svg>
-  )
-}
-
-export default DrinksLine
+import * as React from "react";
+import Svg, { Path } from "react-native-svg";
+const SvgDrinksLine = (props) => (
+  <Svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="currentColor"
+    viewBox="0 0 24 24"
+    {...props}
+  >
+    <Path d="M14 2H6.205a1.25 1.25 0 0 0-1.226 1.005L4.18 7H2v2h2.109L5.48 20.893A1.25 1.25 0 0 0 6.723 22h10.554a1.25 1.25 0 0 0 1.242-1.107L19.89 9H22V7h-2.18l-.8-3.995A1.25 1.25 0 0 0 17.796 2H16V0h-2zm3.78 5H6.22l.6-3h10.36zM6.122 9h11.756l-1.27 11H7.392z" />
+  </Svg>
+);
+export default SvgDrinksLine;

@@ -6,9 +6,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text>Preview</Text>
-      <Icon name="4k-fill" size={100} />
-      <Icon name="bookmark-fill" size={100} />
-      <Icon name="home-2-fill" size={100} />
+      <Icon name="external-link-line" size={100} />
       <StatusBar style="auto" />
     </View>
   );
