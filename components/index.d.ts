@@ -1,5 +1,6 @@
+import { type IconNames } from "./icon-names";
 declare interface RemixIconProps {
-  name: string;
+  name: IconNames;
   size?: number | string;
   color?: string;
   [key: string]: any;

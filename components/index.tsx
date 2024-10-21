@@ -1,22 +1,28 @@
 import { Text } from "react-native";
+import { type IconNames } from "./icon-names";
 import * as Icon from "./icons";
 
 const RemixIcon = ({
-  name = "remixicon-fill",
+  name,
   color = "black",
   size = 24,
   ...props
+}: {
+  name: IconNames;
+  color?: string;
+  size: number;
 }) => {
-  name = name.startsWith("ri-") ? name.substring(3) : name;
   // If name starts with a number add a prefix "svg"
-  name = /^\d/.test(+name[0]) ? `svg-${name}` : name;
+  const resolvedName = /^\d/.test(+name[0] as any) ? `svg-${name}` : name;
 
-  const iconComponentName = name
+  const iconComponentName = resolvedName
     .split("-")
     .map((s) => s[0].toUpperCase() + s.substr(1))
     .join("");
 
+  // @ts-expect-error
   const Component = Icon[iconComponentName];
+
   return Component ? (
     <Component {...props} fill={color || "black"} width={size} height={size} />
   ) : (
